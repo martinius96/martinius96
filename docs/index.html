@@ -38,8 +38,7 @@ Primárne sú programované pre účely zberu dát, ovládania GPIO, čítania h
 Mám skúsenosti s obsluhou analógových a digitálnych vstupov, prerušení pre rôzne stavy detekcie hrany digitálneho vstupného signálu so SW debouncingom. 
 Ovládam komunikáciu s perifériami cez štandardné zbernice - UART / RS232 / RS485 / I2C / SPI / OneWire s kompatibilnou Arduino (C/C++) knižnicou. 
 Pre konektivitu do siete a internetu som využíval technológiu WiFi / Ethernet (komunikácia cez SPI u Arduino dosiek, resp. RMII (Reduced media-independent interface) pri ESP32 s PHY Ethernet) / Sigfox ( komunikácia cez HW / SW UART) pre prenos dát do cloudovej služby, alebo vlastného backendu dosiahnuteľného cez internet, LAN sieť.  
-Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP protokoly napr. 
-HTTP(s) / MQTT(s) a ich implementáciou pod týmito mikrokontrolérmi. 
+Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP protokoly napr. HTTP(s) / MQTT(s) a ich implementáciou pod týmito mikrokontrolérmi. 
 Venujem sa taktiež tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5 s backendom v PHP (procedurálne) pre spracovanie, archiváciu (MySQL) a  vizualizáciu (Google Charts) nameraných údajov zo senzorových uzlov t.j. mikrokontrolérov používateľovi s možnosťou vzdialeného (remote) ovládania mikrokontrolérov v manuálnom / automatickom režime na základe podmienok --> nameraných hodnôt, času a pod... Vytvoril som rôzne webaplikácie aj s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj mikrokontróler, vidieť dáta, ktoré posiela a riadiť jeho logiku, GPIO z webového rozhrania pre konkrétnu aplikáciu (vykurovanie, zavlažovanie...). Webové rozhranie priamo pre mikrokontróler vygeneruje zdrojový kód s možnosťou autentizácie (v POST requeste argumentom / Bearer token v HTTP Auth). Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
 Využíval som operačný systém reálneho času FreeRTOS a osvojil som si elementárne základy spúšťania úloh (tasks) a mechanizmy blokovania úloh, napr. fronta - Queue. 
 Finálna implementácia firmvéru diplomovej práce obsahovala Remote Over The Air (OTA) aktualizácie firmvéru (ECDSA pre dig. podpis). 
@@ -49,6 +48,7 @@ Súčasťou implementácie bolo aj permanentné spustenie HW funkcionalít cez e
 <li>Hladinomer (Arduino / ESP / Sigfox): <a href="http://arduino.clanweb.eu/studna_s_prekladom/">http://arduino.clanweb.eu/studna_s_prekladom/</a> </li>
 <li>RFID vrátnik (Arduino / ESP, open-source): <a href="http://arduino.clanweb.eu/rfid/">http://arduino.clanweb.eu/rfid/</a> </li>
 <li>Vykurovanie s hysterézou (multiuser webaplikácia Arduino / ESP): <a href="http://arduino.clanweb.eu/vykurovanie-online/">http://arduino.clanweb.eu/vykurovanie-online/</a> test login: admin / admin </li>
+<li>WiFi termostat (ESP8266 / ESP32, len firmvér): <a href="https://github.com/martinius96/WiFi-termostat/tree/main/firmware">https://github.com/martinius96/WiFi-termostat/tree/main/firmware</a> </li>
 
 <hr><center><h4>Github externé odkazy na zdrojové kódy projektov: </h4></center><hr>
 <li>RFID vrátnik (open-source): <a href="https://github.com/martinius96/RFID-otvaranie-dveri">https://github.com/martinius96/RFID-otvaranie-dveri</a> </li>
