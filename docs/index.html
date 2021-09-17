@@ -66,10 +66,10 @@ Ovládam komunikáciu s perifériami cez štandardné zbernice - UART / RS232 / 
 Pre konektivitu do siete a internetu som využíval technológiu WiFi / Ethernet (komunikácia cez SPI u Arduino dosiek, resp. RMII pri ESP32 s PHY Ethernet) / Sigfox (komunikácia cez HW / SW UART) pre prenos dát do cloudovej služby, alebo vlastného backendu dosiahnuteľného cez internet, LAN sieť.  
 Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP protokoly napr. HTTP(s) / MQTT(s) a ich implementáciou pod týmito mikrokontrolérmi.
 Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch, alebo na webhostingu s PHP backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
-Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládania GPIO s možnosťou konfigurácie údajov mikrokontroléra. 
 </p>
 <hr> 
 <p style="text-align: justify;">
+Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládania GPIO s možnosťou konfigurácie údajov mikrokontroléra. 
 Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod... 
 Vytvoril som aj rôzne webaplikácie aj s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol tvorený mikrokontrolérom, dokáže preberať dáta, ktoré posiela a riadiť jeho logiku, GPIO z webového rozhrania pre konkrétnu aplikáciu (vykurovanie, zavlažovanie...). 
 Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token).
