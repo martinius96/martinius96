@@ -68,15 +68,15 @@ Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP 
 </p>
 <hr> 
 <p style="text-align: justify;">
-Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5 bežiacich na mikrokontroléroch, alebo na virtuálnych strojoch s PHP backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
-Webové rozhrania obsahujú aj možnosť vzdialeného (remote) ovládania GPIO a konfiguračných údajov mikrokontrolérov. 
-Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných hodnôt, času a pod... 
-Vytvoril som rôzne webaplikácie aj s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol tvorený mikrokontrolérom, dokáže preberať dáta, ktoré posiela a riadiť jeho logiku, GPIO z webového rozhrania pre konkrétnu aplikáciu (vykurovanie, zavlažovanie...). 
-Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token...).
+Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch, alebo na webhostingu s PHP backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
+Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládania GPIO s možnosťou konfigurácie údajov mikrokontroléra. 
+Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod... 
+Vytvoril som aj rôzne webaplikácie aj s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol tvorený mikrokontrolérom, dokáže preberať dáta, ktoré posiela a riadiť jeho logiku, GPIO z webového rozhrania pre konkrétnu aplikáciu (vykurovanie, zavlažovanie...). 
+Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token).
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
 Využíval som operačný systém reálneho času FreeRTOS a osvojil som si elementárne základy spúšťania úloh (tasks) a mechanizmy blokovania úloh, napr. fronta - Queue. 
 Finálna implementácia firmvéru diplomovej práce obsahovala Remote Over The Air (OTA) aktualizácie firmvéru (podpisová schéma ECDSA pre dig. podpis firmvéru). 
-Súčasťou implementácie bolo aj permanentné spustenie HW funkcionalít cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčných aplikácii (Release). 
+Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkcionalít cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčných aplikácii (Release) pre zabezpečenie firmvéru a bootovacieho procesu. 
 </p>
 <hr><center><h4>Referencie na mnou realizované projekty - Demá na vyskúšanie: </h4></center><hr>
 <li>Hladinomer (Arduino / ESP / Sigfox): <a href="http://arduino.clanweb.eu/studna_s_prekladom/">http://arduino.clanweb.eu/studna_s_prekladom/</a> </li>
