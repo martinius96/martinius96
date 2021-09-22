@@ -233,14 +233,23 @@ Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkci
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
 	    <script>
-var myCarousel = document.getElementById('myCarousel')
-var myCarouse2 = document.getElementById('myCarousel2')
-myCarousel.addEventListener('slide.bs.carousel', function () {
+//var myCarousel = document.getElementById('myCarousel')
+//var myCarouse2 = document.getElementById('myCarousel2')
+//myCarousel.addEventListener('slide.bs.carousel', function () {
   // do something...
-})
-myCarouse2.addEventListener('slide.bs.carousel', function () {
+//})
+//myCarouse2.addEventListener('slide.bs.carousel', function () {
   // do something...
+//})
+
+var carouselA = document.getElementById('myCarousel')
+var carouselB = document.getElementById('myCarousel2')
+
+carouselA.addEventListener('slide.bs.carousel', function(e) {
+    var bsCarouselB = bootstrap.Carousel.getInstance(carouselB)
+    bsCarouselB.to(e.to)
 })
+
 </script>
     </body>
 </html>
