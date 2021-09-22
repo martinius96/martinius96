@@ -59,16 +59,6 @@
   </li>
 </ul>
 <hr><center><h4>Záujmy, oblasť zamerania</h4></center><hr>
-<span class="label label-default">Arduino Core</span>
-<span class="label label-primary">ESP-IDF</span>
-<span class="label label-success">HTML</span>
-<span class="label label-info">Bootstrap</span>
-<span class="label label-warning">PHP</span>
-<span class="label label-danger">CSS</span>
-<span class="label label-default">Arduino</span>
-<span class="label label-primary">ESP8266, ESP32</span>
-<span class="label label-info">Sigfox</span>	
-<span class="label label-warning">HTTP, MQTT, UDP</span>
 <p style="text-align: justify;">
 Vo voľnom čase sa venujem programovaniu mikrokontrolérov AVR ATmega na Arduino vývojových kitoch, ESP8266, ESP32 v jazyku Wiring (Arduino Core) v prostredí Arduino IDE. 
 Primárne sú programované pre účely zberu dát, ovládania GPIO, čítania hodnôt z digitálnych senzorov, ADC prevodníka a iné. 
@@ -80,8 +70,8 @@ Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HT
 </p>
 <hr> 
 <p style="text-align: justify;">
-Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre aplikáciu. 
-Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod... 
+Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre logiku aplikácie. 
+Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod. Logika spustená vykonaním PHP scriptu, ktorý spustí mikrokontróler a načíta payload (JSON, RAW...). 
 Vytvoril som niekoľko jednoduchých webaplikácii s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol a riadiť jeho logiku, GPIO z webového rozhrania pre danú aplikáciu bez možnosti vidieť, či spravovať dáta iných používateľov. 
 Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token).
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
