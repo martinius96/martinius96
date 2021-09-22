@@ -59,6 +59,16 @@
   </li>
 </ul>
 <hr><center><h4>Záujmy, oblasť zamerania</h4></center><hr>
+<span class="label label-default">Arduino Core</span>
+<span class="label label-primary">ESP-IDF</span>
+<span class="label label-success">HTML</span>
+<span class="label label-info">Bootstrap</span>
+<span class="label label-warning">PHP</span>
+<span class="label label-danger">CSS</span>
+<span class="label label-default">Arduino</span>
+<span class="label label-primary">ESP8266, ESP32</span>
+<span class="label label-info">Sigfox</span>	
+<span class="label label-warning">HTTP, MQTT, UDP</span>
 <p style="text-align: justify;">
 Vo voľnom čase sa venujem programovaniu mikrokontrolérov AVR ATmega na Arduino vývojových kitoch, ESP8266, ESP32 v jazyku Wiring (Arduino Core) v prostredí Arduino IDE. 
 Primárne sú programované pre účely zberu dát, ovládania GPIO, čítania hodnôt z digitálnych senzorov, ADC prevodníka a iné. 
@@ -66,18 +76,19 @@ Mám skúsenosti s obsluhou analógových a digitálnych vstupov, prerušení pr
 Ovládam komunikáciu s perifériami cez štandardné zbernice - UART / RS232 / RS485 / I2C / SPI / OneWire s kompatibilnou Arduino (C/C++) knižnicou. 
 Pre konektivitu do siete a internetu som využíval technológiu WiFi / Ethernet (komunikácia cez SPI u Arduino dosiek, resp. RMII pri ESP32 s PHY Ethernet) / Sigfox (komunikácia cez HW / SW UART) pre prenos dát do cloudovej služby, alebo vlastného backendu dosiahnuteľného cez internet, LAN sieť.  
 Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP protokoly napr. HTTP(s) / MQTT(s) a ich implementáciou pod týmito mikrokontrolérmi.
-Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch, alebo na webhostingu s PHP backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
+Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch v režime webservera, alebo na webhostingu s PHP backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
 </p>
 <hr> 
 <p style="text-align: justify;">
-Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládania GPIO s možnosťou konfigurácie údajov mikrokontroléra. 
+Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre aplikáciu. 
 Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod... 
-Vytvoril som aj rôzne webaplikácie aj s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol tvorený mikrokontrolérom, dokáže preberať dáta, ktoré posiela a riadiť jeho logiku, GPIO z webového rozhrania pre konkrétnu aplikáciu (vykurovanie, zavlažovanie...). 
+Vytvoril som niekoľko jednoduchých webaplikácii s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol a riadiť jeho logiku, GPIO z webového rozhrania pre danú aplikáciu bez možnosti vidieť, či spravovať dáta iných používateľov. 
 Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token).
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
 Využíval som operačný systém reálneho času FreeRTOS a osvojil som si elementárne základy spúšťania úloh (tasks) a mechanizmy blokovania úloh, napr. fronta - Queue. 
-Finálna implementácia firmvéru diplomovej práce obsahovala Remote Over The Air (OTA) aktualizácie firmvéru (podpisová schéma ECDSA pre digitálny podpis firmvéru). 
-Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkcionalít cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčné aplikácie (Release) pre zabezpečenie firmvéru, odtlačku Bootloadera (digestu) a bootovacieho procesu. 
+Finálna implementácia firmvéru diplomovej práce pre ESP32 obsahovala Remote Over The Air (OTA) aktualizácie firmvéru distribuovaného cez cloudové úložisko (podpisová schéma ECDSA pre digitálny podpis firmvéru). 
+Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkcionalít ESP32 cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčné aplikácie (Release) pre zabezpečenie firmvéru, odtlačku Bootloadera (digestu) a bootovacieho procesu.
+Pre prácu s eFuses a digitálnym podpisom som využil balík ESPTOOL s nástrojmi esptool.py, espefuse.py, espsecure.py. 
 </p>
 <hr><center><h4>Referencie na mnou realizované projekty - Demá na vyskúšanie: </h4></center><hr>
 <li><b>Hladinomer (Arduino / ESP / Sigfox):</b> <a href="http://arduino.clanweb.eu/studna_s_prekladom/">http://arduino.clanweb.eu/studna_s_prekladom/</a> </li>
@@ -85,7 +96,7 @@ Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkci
 <li><b>Monitor teploty a vlhkosti s ovládaním solenoidov kúrenia:</b> <a href="http://arduino.clanweb.eu/daxville/">http://arduino.clanweb.eu/daxville/</a> </li>
 <li><b>Vykurovanie s hysterézou (multiuser webaplikácia Arduino / ESP - open-source):</b> <a href="http://arduino.clanweb.eu/vykurovanie-online/">http://arduino.clanweb.eu/vykurovanie-online/</a> test login: admin / admin </li>
 <li><b>Časové riadenie zavlažovania so zohľadnením počasia (Arduino + Ethernet):</b> <a href="http://arduino.clanweb.eu/zavlaha/">http://arduino.clanweb.eu/zavlaha/</a> test login: admin / admin </li>
-<li><b>WiFi termostat (ESP8266 / ESP32, len firmvér):</b> <a href="https://github.com/martinius96/WiFi-termostat/tree/main/firmware">https://github.com/martinius96/WiFi-termostat/tree/main/firmware</a> </li>
+<li><b>WiFi termostat (ESP8266 / ESP32, len firmvér .bin):</b> <a href="https://github.com/martinius96/WiFi-termostat/tree/main/firmware">https://github.com/martinius96/WiFi-termostat/tree/main/firmware</a> </li>
 
 <hr><center><h4>Externé odkazy na zdrojové kódy projektov - Github: </h4></center><hr>
 <li><b>RFID vrátnik (open-source):</b> <a href="https://github.com/martinius96/RFID-otvaranie-dveri">https://github.com/martinius96/RFID-otvaranie-dveri</a> </li>
