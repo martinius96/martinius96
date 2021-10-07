@@ -9,15 +9,87 @@
 
 <url>
   <loc>https://martinius96.github.io/martinius96/</loc>
-  <lastmod>2021-09-27T22:07:01+00:00</lastmod>
+  <lastmod>2021-10-07T10:19:03+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://martinius96.github.io/martinius96/en/</loc>
-  <lastmod>2021-09-27T22:07:01+00:00</lastmod>
+  <lastmod>2021-10-07T10:19:03+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Enviromentalna_etika_Chlebovec_Martin_Semestralna_praca.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Chlebovec_Martin_Sucasne_problemy_Europskej_integracie.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/L1-PON.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/L2_OV.pdf</loc>
+  <lastmod>2021-10-07T10:19:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/L3_OV.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Anteny_hlasove_sluzby.pdf</loc>
+  <lastmod>2021-10-07T10:19:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/RADIUS_server_Zeroshell_Chlebovec_Martin.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Bezpecna_vzdialena_aktualizacia_IoT_senzora_na_baze_ESP32_MCH_MD.pdf</loc>
+  <lastmod>2021-10-07T10:19:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Smerovanie_v_ramci_SS_Chlebovec_Garbera.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/mmWaves%2C%20typy%20ant%C3%A9n%2C%20typy%20komunik%C3%A1cie.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Chlebovec_Martin_Bakalarska_praca.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://martinius96.github.io/martinius96/pdf/Chebovec_Martin_Diplomova_praca.pdf</loc>
+  <lastmod>2021-10-07T10:19:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 
 
