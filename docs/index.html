@@ -127,17 +127,19 @@ Mám skúsenosti s obsluhou analógových a digitálnych vstupov, prerušení pr
 Ovládam komunikáciu s perifériami cez štandardné zbernice - UART / RS232 / RS485 / I2C / SPI / OneWire s kompatibilnou Arduino (C/C++) knižnicou. 
 Pre konektivitu do siete a internetu som využíval technológiu WiFi / Ethernet (komunikácia cez SPI u Arduino dosiek, resp. RMII pri ESP32 s PHY Ethernet) / Sigfox (komunikácia cez HW / SW UART) pre prenos dát do cloudovej služby, alebo vlastného backendu dosiahnuteľného cez internet, LAN sieť.  
 Mám skúsenosti s prenosom dát cez UDP datagramy, ale aj cez štandardné TCP protokoly napr. HTTP(s) / MQTT(s) a ich implementáciou pod týmito mikrokontrolérmi.
-Venujem tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch v režime webservera, alebo na webhostingu s PHP (procedurálne, nie OOP) backendom pre spracovanie, archiváciu (MySQL) a vizualizáciu nameraných údajov zo senzorových uzlov v grafickej reprezentácii (Google Gauges / Charts).
+Venujem sa tvorbe jednoduchých responzívnych (Bootstrap) webových rozhraní v HTML5, ktoré môžu bežať na mikrokontroléroch v režime webservera, alebo na webhostingu s podporou PHP (procedurálne, nie OOP) scriptov pre backend umožňujúci spracovanie, archiváciu (MySQL). 
+Vizualizáciu nameraných údajov zo senzorových uzlov realizujem v grafickej reprezentácii (Google Charts / Gauges).
 </p>
 <hr> 
 <p style="text-align: justify;">
-Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre logiku aplikácie. 
-Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod. Logika spustená vykonaním PHP scriptu, ktorý spustí mikrokontróler a načíta payload (JSON, RAW...) v Response webservera. 
-Vytvoril som pár jednoduchých webaplikácii s možnosťou multiuser prístupu, kedy dokáže používateľ spravovať svoj senzorový uzol a riadiť jeho logiku, GPIO z webového rozhrania pre danú aplikáciu bez možnosti vidieť, či upravovať dáta iných používateľov registrovaných v systéme. 
-Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token).
+Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre logiku aplikácie (napr. cieľová teplota, hysteréza). 
+Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod. Logika spustená vykonaním PHP scriptu, ktorý spustí mikrokontróler a načíta payload (JSON, RAW...) v Response webservera, na ktorý dokáže vykonať callback. 
+Vytvoril som pár jednoduchých webaplikácii s možnosťou multiuser prístupu (session), ktoré umožňujú používateľovi vizualizovať dáta z jeho mikrokontroléra s možnosťou jeho vzdialenej správy.
+Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléru cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token a iné).
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
 Využíval som operačný systém reálneho času FreeRTOS a osvojil som si elementárne základy spúšťania úloh (tasks) a mechanizmy blokovania úloh, napr. fronta - Queue. 
 Finálna implementácia firmvéru diplomovej práce pre ESP32 obsahovala Remote Over The Air (OTA) aktualizácie firmvéru distribuovaného cez cloudové úložisko (podpisová schéma ECDSA pre digitálny podpis firmvéru). 
+Prenos firmvéru cez zabezpečený prenosový kanál - HTTPS protokol. Vygenerovaný vlastný CA certifikát, certifikát pre doménu nástrojom OpenSSL, implementácia do HTTPD služby Cent OS.
 Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkcionalít ESP32 cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčné aplikácie (Release) pre zabezpečenie firmvéru, odtlačku Bootloadera (digestu) a bootovacieho procesu.
 Využil som aj balík ESPTOOL s nástrojmi esptool.py (práca s flash ESP32), espefuse.py (práca s eFuses), espsecure.py (kryptografické operácie, generovanie kľúčov, podpisovanie firmvéru). 
 </p>
