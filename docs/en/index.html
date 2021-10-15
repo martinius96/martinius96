@@ -121,24 +121,26 @@ opacity: 0.2;
 <li><a href="../pdf/Projektovy_manazment_13_30_SK4_V7_FINAL.pdf">Data transmission over a communication network built for IoT - (Project design syllabus - Project management)</a></li>
 <hr><center><h4>Interests, area of focus</h4></center><hr>
 <p style="text-align: justify;">
-For last few years I am interested in programming AVR ATmega microcontrollers (Arduino development kits) and WiFi microcontrollers from Espressif Systems production - ESP8266, ESP32 in Wiring language (Arduino Core) in the Arduino IDE environment.
-They are primarily programmed for the purposes of data collection, GPIO control, reading values from digital sensors, ADC converter, data transfer to higher systems / own apps.
-I have experience with operating analog and digital inputs, interrupts for various states of edge detection of digital input signal (RISING / FALLING) with SW debouncing.
-I was able to implement communication with peripherals via standard buses - UART / RS232 / RS485 / I2C / SPI / OneWire with a compatible Arduino (C / C ++) library.
+During my free time in last few years I have created created various program implementations for AVR ATmega microcontrollers on Arduino development kits and WiFi microcontrollers from Espressif Systems - ESP8266, ESP32 in Wiring language (Arduino Core) in the Arduino IDE environment.
+They were primarily programmed for purposes related to data collection, GPIO control, reading values from digital sensors, ADC converter and their transfer to higher systems.
+I have experience with operating analog inputs and digital IO pins, interrupts for various states of edge detection of digital input signal (RISING / FALLING) with SW debouncing.
+I have mastered communication with peripherals using standard buses - UART / RS232 / RS485 / I2C / SPI / OneWire with a compatible Arduino (C / C ++) library.
 For network and Internet connectivity, I used WiFi / Ethernet technology (communication via SPI for Arduino boards, or RMII for ESP32 with PHY Ethernet) / Sigfox (communication via HW / SW UART) for data transfer to the cloud service, or my own backend available over the Internet, LAN network.
-I have experience with data transmission via UDP datagrams, but also via standard TCP protocols, e.g. HTTP(S) / MQTT(S) and their implementation under these microcontrollers.
-I dedicate creation of simple responsive (Bootstrap) web interfaces in HTML5, which can run on microcontrollers in web server mode, or at web hosting with PHP (procedural, not OOP) backend for processing, archiving (MySQL) and visualization of measured data from sensor nodes in graphical representation (Google Gauges / Charts).
+I have experience with data transmission via UDP datagrams, but also via standard most used TCP protocols, for instance HTTP(s) / MQTT(s) and their implementation under these microcontrollers.
+I have created a few simple responsive (Bootstrap) web interfaces in HTML5, which can run on microcontrollers in web server mode, or at web hosting with support for PHP (procedural, not OOP) scripts for backend, that can do datas processing, their storage to MySQL database.
+For visualization of measured data from sensor nodes in graphical representation I was using Google Charts / Gauges.
 </p>
 <hr> 
 <p style="text-align: justify;">
-Based on the requirements of the application, the web interfaces created by me also enable remote control of GPIO with the possibility of configuring control data for the application logic.
-Control in manual / automatic mode based on conditions -> measured physical quantities, time, etc. Logic executed by executing a PHP script that runs a microcontroller and loads a payload (JSON, RAW ...) in the Response web server.
-I created a couple of simple web applications with multiuser access, where the user can manage his sensor node and control its logic, GPIO from the web interface for the application without the ability to see or edit the data of other users registered in the system.
-The web interface allows to generate source code for the microcontroller based on the set data with the possibility of authentication of the microcontroller via an argument in the POST request, or via HTTP authentication (Basic Auth / Bearer token).
-At Department of Electrical Engineering and Informatics TUKE, I carried out diploma thesis using the ESP-IDF framework (C language) for the ESP32 microcontroller from Espressif Systems.
-I used the FreeRTOS real-time operating system and mastered the basic basics of task execution (tasks) and task blocking mechanisms, for instance - Queue.
-The final firmware implementation of the thesis for ESP32 included Remote Over The Air (OTA) firmware updates distributed via cloud storage (ECDSA digital firmware signature signature scheme).
-Part of the solution of the diploma thesis was the permanent launch of HW functionalities ESP32 via eFuses - Secure Boot V1, Flash Encryption in the mode for production applications (Release) to secure the firmware, Bootloader (digest) and the boot process.
+Based on the application requirements, the web interfaces created by me also enable remote GPIO control with the possibility of configuring control data for the application logic (eg target temperature, hysteresis).
+Control in manual / automatic mode based on conditions -> measured physical quantities, time, etc. Logic executed by executing a PHP script that runs a microcontroller and loads a payload (JSON, RAW ...) in the Response web server, to which it can make a callback.
+I created a couple of simple web applications with the possibility of multiuser access (session), which allow the user to visualize data from his microcontroller with the possibility of his remote management.
+The web interface allows to generate source code for the microcontroller based on the set data with the possibility of authentication of the microcontroller via an argument in the POST request, or via HTTP authentication (Basic Auth / Bearer token and others).
+At FEI TUKE, I carried out a diploma thesis using the ESP-IDF framework (C language) for the ESP32 microcontroller from Espressif Systems.
+I used the FreeRTOS real-time operating system and mastered the basic basics of task execution (tasks) and task blocking mechanisms, e.g. front - Queue.
+The final firmware implementation of the thesis for ESP32 included Remote Over The Air (OTA) firmware updates distributed through cloud storage (ECDSA digital firmware signature signature scheme).
+Firmware transfer via secure transmission channel - HTTPS protocol. Generated own CA certificate, certificate for the domain using the OpenSSL tool, implementation into the HTTPD service of Cent OS.
+Part of the solution of the diploma thesis was also the permanent launch of HW functionalities ESP32 via eFuses - Secure Boot V1, Flash Encryption in the mode for production applications (Release) to secure the firmware, Bootloader (digest) and boot process.
 I also used the ESPTOOL package with the tools esptool.py (working with ESP32 flash), espefuse.py (working with eFuses), espsecure.py (cryptographic operations, key generation, firmware signing).
 </p>
 <hr><center><h4>References for projects implementations - DEMO: </h4></center><hr>
