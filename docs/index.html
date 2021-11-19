@@ -151,7 +151,8 @@ Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na 
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
 Využíval som operačný systém reálneho času FreeRTOS a osvojil som si elementárne základy spúšťania úloh (tasks) a mechanizmy blokovania úloh, napr. fronta - Queue. 
 Finálna implementácia firmvéru diplomovej práce pre ESP32 obsahovala Remote Over The Air (OTA) aktualizácie firmvéru distribuovaného cez cloudové úložisko (podpisová schéma ECDSA pre digitálny podpis firmvéru). 
-Prenos firmvéru cez zabezpečený prenosový kanál - HTTPS protokol. Vygenerovaný vlastný CA certifikát, certifikát pre doménu nástrojom OpenSSL, implementácia do HTTPD služby Cent OS.
+Downlink firmvéru cez zabezpečený prenosový kanál - HTTPS protokol so zápisom do voľnej (pasívnej) partície vo flash pamäti. 
+Vygenerovaný vlastný Root CA certifikát, certifikát pre doménu nástrojom OpenSSL, implementácia do HTTPD služby Cent OS pre HSTS presmerovanie (v bakalárskej práci využitá i autentizácia klienta klientským certifikátom).
 Súčasťou riešenia diplomovej práce bolo aj permanentné spustenie HW funkcionalít ESP32 cez eFuses - Secure Boot V1, Flash Encryption v režime pre produkčné aplikácie (Release) pre zabezpečenie firmvéru, odtlačku Bootloadera (digestu) a bootovacieho procesu.
 Využil som aj balík ESPTOOL s nástrojmi esptool.py (práca s flash ESP32), espefuse.py (práca s eFuses), espsecure.py (kryptografické operácie, generovanie kľúčov, podpisovanie firmvéru). 
 </p>
