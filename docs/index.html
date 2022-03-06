@@ -210,7 +210,7 @@ Vizualizáciu nameraných údajov zo senzorových uzlov realizujem v grafickej r
 <hr> 
 <p style="text-align: justify;">
 Mnou vytvorené webové rozhrania umožňujú na základe požiadaviek aplikácie aj vzdialené (remote) ovládanie GPIO s možnosťou konfigurácie riadiacich údajov pre logiku aplikácie (napr. cieľová teplota, hysteréza). 
-Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, času a pod. Logika spustená vykonaním PHP scriptu, ktorý spustí mikrokontróler a načíta payload (JSON, RAW...) v Response webservera, na ktorý dokáže vykonať callback. 
+Ovládanie v manuálnom / automatickom režime na základe podmienok --> nameraných fyzikálnych veličín, rozhodovacieho prahu, času... Logika spustená vykonaním PHP scriptu, ktorý spustí mikrokontróler a načíta payload (JSON, RAW...) v Response webservera, na ktorý dokáže vykonať callback. 
 Vytvoril som pár jednoduchých webaplikácii s možnosťou multiuser prístupu (session), ktoré umožňujú používateľovi vizualizovať dáta z jeho mikrokontroléra s možnosťou jeho vzdialenej správy.
 Webové rozhranie umožňuje vygenerovať zdrojový kód pre mikrokontróler na základe nastavených údajov s možnosťou autentizácie mikrokontroléra cez argument v POST requeste, alebo cez HTTP autentizáciu (Basic Auth / Bearer token, Digest a iné).
 Na FEI TUKE som realizoval diplomovú prácu s využitím frameworku ESP-IDF (jazyk C) pre mikrokontróler ESP32 od Espressif Systems. 
